@@ -19,14 +19,16 @@
 	</div>
 	<div id="projects" class="container">
 		<h3>Projects</h3>
+
 		<div id='project-grid'>
 			<div class = 'row container'>
-				<div class='col-xs-12 col-sm-4 project'>
-				</div>
-				<div class='col-xs-12 col-sm-4 project'>
-				</div>
-				<div class='col-xs-12 col-sm-4 project'>
-				</div>
+				{{#each model as |project|}}
+					<div class='col-xs-12 col-sm-3 project'>
+						<h5>{{project.title}}</h5>
+{{!-- 						<p>{{project.description}}</p>
+ --}}					</div>
+				{{/each}}
+
 			</div>
 		</div>
 	</div>

@@ -21,6 +21,7 @@ export default Ember.Controller.extend({
 			newMessage.save().then( success, failure );
 			this.set('contactEmail', '');
 			this.set('contactMessage', '');
+			this.set('contactForm', false);
 		}
 	}
 });
