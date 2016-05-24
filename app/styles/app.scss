@@ -1,0 +1,112 @@
+@import "bootstrap";
+$main-teal: #2D959E;
+$main-lightblue: #59A6D6;
+$main-brwn1: #55463C;
+$main-brwn2: #A76D47;
+$main-brwn3: #C18254;
+$main-brwn4: #CD9C6D;
+$main-brwn5: #DCB491;
+$main-brwn5: #EAD7BF;
+$main-dkgry: #6F8784;
+// Diff theme
+$background-color: #DADADA;
+$about-bg-color: #C5C5C5;
+$about-font-color: black;
+$projects-bg-color: #C5C5C5;
+$projects-font-color: black;
+$contact-bg-color: #C5C5C5;
+$contact-font-color: black;
+$icon-color: #737373;
+$icon-hover-color: #FFF672;
+$background-img: 'http://i.imgur.com/6duIe5i.jpg';
+$header-font: 'Raleway';
+
+html {
+	background: $background-color;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    // background: $background-color;
+	}
+}
+
+h3 {
+	font-family: $header-font;
+	font-weight: 100;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+a {
+	color: $main-lightblue;
+}
+a:hover {
+	text-decoration: none;
+	color: $icon-hover-color;
+}
+.container-fluid {
+	background: $background-color;
+	#main-header {
+		position: relative;
+		height:100px;
+		#profile-pic-container {
+		width: 73px;
+		height: 73px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		top: 55px;
+		#profile-pic {
+			height: 70px;
+			border-radius: 50px;
+			margin: 0 auto;
+			}
+		}
+	}
+	#about {
+		background: $about-bg-color;
+		color: $about-font-color;
+	}
+	#projects {
+		background: $projects-bg-color;
+		color: $projects-font-color;
+		#project-grid {
+
+			.project {
+				border: 1px solid gray;
+				height: 200px;
+			}
+		}
+	}
+	#contact {
+		background: $contact-bg-color;
+		color: $contact-font-color;
+	}
+
+	#social-media-container {
+		width: 142px;
+		margin: 0 auto;
+		.social-media-icon {
+			display: inline-block;
+			color: $icon-color;
+			&:hover {
+				color: $icon-hover-color;
+			}
+		}
+	}
+	.hidden-btn {
+		background: transparent;
+		border: none;
+		color: $main-lightblue;
+		&:hover {
+			color: $icon-hover-color;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+

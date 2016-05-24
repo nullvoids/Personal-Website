@@ -1,3 +1,55 @@
-<h2 id="title">Welcome to Ember</h2>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class='container-fluid'>
+	<div id="main-header" class="container">
+		<div id='profile-pic-container'><img id="profile-pic" src="http://i.imgur.com/xwUewwN.jpg"/></div>
+	</div>
 
-{{outlet}}
+	<div id="about" class="container">
+		<h3>About</h3>
+		<p>
+			I have been working as a Full-Stack Developer since mid-2015. The majority of my development experience stems from my work with the Ruby on Rails framework. <a target='_none' href="https://en.wikipedia.org/wiki/Flow_(psychology)">The zone</a> has become second nature for me, so you'll probably frequently catch me deeply engrossed in whatever I'm doing. However, please don't take this to mean that I am reclusive. I am extremely easy to get along with and I thrive in team-based environments that practice effective communication. 
+		</p>
+		<p>In my freetime, I am probably learning the latest frontend framework, tinkering with my Rasberry Pi, playing video games or exploring the beautiful city of San Francisco.</p>
+		<div id='social-media-container'>
+			<a target='_none' href='http://www.github.com/sollabeck'><div class='social-media-icon'>{{fa-icon 'github-alt' size=2}}</div></a>
+			<a target='_none' href='http://www.linkedin.com/in/ceballos392'><div class='social-media-icon'>{{fa-icon 'linkedin' size=2}}</div></a>
+			<a target='_none' href='http://www.instagram.com/sollabeck'><div class='social-media-icon'>{{fa-icon 'fa-instagram' size=2}}</div></a>
+			<a target='_none' href='http://www.facebook.com/kevinceballos'><div class='social-media-icon'>{{fa-icon 'facebook-official' size=2}}</div></a>
+			<a target='_none' href='http://www.twitter.com/sollabeck'><div class='social-media-icon'>{{fa-icon 'twitter' size=2}}</div></a>
+		</div>
+	</div>
+	<div id="projects" class="container">
+		<h3>Projects</h3>
+		<div id='project-grid'>
+			<div class = 'row container'>
+				<div class='col-xs-12 col-sm-4 project'>
+				</div>
+				<div class='col-xs-12 col-sm-4 project'>
+				</div>
+				<div class='col-xs-12 col-sm-4 project'>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact" class="container">
+		<h3>Leave A Message <button class='hidden-btn' {{action 'toggleContactForm'}}>{{fa-icon 'comment-o'}}</button></h3>
+		{{#if contactForm}}
+		<form>
+			<fieldset class='form-group'>
+				<label for='email'>Your Email:</label>
+				<input type='email' class='form-control' id='email' placeholder='Enter your email' />
+				<small class="text-muted">I'll never share your email with anyone else.</small>
+			</fieldset>
+			<fieldset>
+				<label for='message'>Your Message:</label>
+				<textarea class='form-control' placeholder='Your message here...' id='message'></textarea>
+			</fieldset>
+			<br>
+		    <button type="submit" class="btn btn-primary">Send</button>
+		</form>
+		{{/if}}
+		<br/>
+	</div>
+</div>
