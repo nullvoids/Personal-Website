@@ -1,6 +1,6 @@
 {
   "name": "kevin-frontend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Small description for kevin-frontend goes here",
   "private": true,
   "directories": {
@@ -19,8 +19,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "active-model-adapter": "2.1.1",
     "broccoli-asset-rev": "^2.2.0",
     "ember-ajax": "0.7.1",
+    "ember-browserify": "^1.1.9",
     "ember-cli": "2.4.2",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.5",
@@ -41,6 +43,8 @@
     "ember-font-awesome": "2.1.1",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.0"
+    "loader.js": "^4.0.0",
+    "sendgrid": "^2.0.0",
+    "sendgrid-web": "^0.0.5"
   }
 }
