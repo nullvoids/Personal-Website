@@ -1,26 +1,22 @@
 @import "bootstrap";
-$main-teal: #2D959E;
-$main-lightblue: #59A6D6;
-$main-brwn1: #55463C;
-$main-brwn2: #A76D47;
-$main-brwn3: #C18254;
-$main-brwn4: #CD9C6D;
-$main-brwn5: #DCB491;
-$main-brwn5: #EAD7BF;
-$main-dkgry: #6F8784;
-// Diff theme
-$background-color: #DADADA;
-$about-bg-color: #C5C5C5;
+$main-lightblue: #4090DB;
+$confirmation-msg-color: #4090DB;
+$lightgrey: #edeeee;
+$background-color: #FAFAFA;
+$about-bg-color: white;
 $about-font-color: black;
-$projects-bg-color: #C5C5C5;
+$projects-bg-color: white;
 $projects-font-color: black;
-$contact-bg-color: #C5C5C5;
+$contact-bg-color: white;
 $contact-font-color: black;
-$icon-color: #737373;
-$icon-hover-color: #FFF672;
+$icon-color: #4090DB;
+// $icon-hover-color: #FFF672;
+$icon-hover-color: #2D6599;
 $background-img: 'http://i.imgur.com/6duIe5i.jpg';
 $header-font: 'Raleway';
-
+.confirmation-msg {
+	color: $confirmation-msg-color;
+}
 html {
 	background: $background-color;
 	-webkit-font-smoothing: antialiased;
@@ -30,6 +26,9 @@ html {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     // background: $background-color;
 	}
+}
+label {
+	font-family: $header-font;
 }
 
 h3 {
@@ -60,6 +59,7 @@ a:hover {
 		right: 0;
 		top: 55px;
 		#profile-pic {
+			border: 1px solid lightgrey;
 			height: 70px;
 			border-radius: 50px;
 			margin: 0 auto;
@@ -67,21 +67,32 @@ a:hover {
 		}
 	}
 	#about {
+		border: 1px solid $lightgrey;
+		border-bottom: none;
 		background: $about-bg-color;
 		color: $about-font-color;
 	}
 	#projects {
+		border-right: 1px solid $lightgrey;
+		border-left: 1px solid $lightgrey;
 		background: $projects-bg-color;
 		color: $projects-font-color;
 		#project-grid {
 
 			.project {
-				border: 1px solid gray;
-				height: 200px;
+				// border: 1px solid gray;
+				text-align: center;
+				.project-img {
+					width: 80%;
+					max-height: 80%;
+				}
 			}
 		}
 	}
 	#contact {
+		border-left: 1px solid $lightgrey;
+		border-right: 1px solid $lightgrey;
+		border-bottom: 1px solid $lightgrey;
 		background: $contact-bg-color;
 		color: $contact-font-color;
 	}

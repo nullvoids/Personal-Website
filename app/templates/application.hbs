@@ -25,6 +25,7 @@
 				{{#each model as |project|}}
 					<div class='col-xs-12 col-sm-3 project'>
 						<h5>{{project.title}}</h5>
+						<img class="project-img" src={{project.imageUrl}}/>
 {{!-- 						<p>{{project.description}}</p>
  --}}					</div>
 				{{/each}}
@@ -34,6 +35,10 @@
 	</div>
 	<div id="contact" class="container">
 		<h3>Leave A Message <button class='hidden-btn' {{action 'toggleContactForm'}}>{{fa-icon 'comment-o'}}</button></h3>
+		{{#if sentMessage}}
+			<small class="confirmation-msg">Your message has been sent!</small>
+			<br>
+		{{/if}}
 		{{#if contactForm}}
 		<div>
 			<fieldset class='form-group'>

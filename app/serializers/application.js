@@ -1,14 +1,9 @@
-import Ember from 'ember';
 import DS from 'ember-data';
 
-var underscore = Ember.String.underscore;
-
 export default DS.JSONAPISerializer.extend({
-  keyForAttribute: function(attr) {
-    return underscore(attr);
-  },
-
-  keyForRelationship: function(rawKey) {
-    return underscore(rawKey);
+  keyForAttribute: function(attr, method) {
+  	// Seems like it runs camelize on the model attribute names to be able to map the json
+  	// From rails to the attribute name... Confusing...
+    return Ember.String.camelize(attr);
   }
 });
